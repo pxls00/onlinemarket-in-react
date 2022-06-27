@@ -7,7 +7,7 @@
     }
     &__content {
         border: 2px solid $borderGrey;
-        border-image: linear-gradient(to bottom, $borderGrey, transparent, transparent, $borderGrey);
+        border-image: linear-gradient(to bottom, #8b8b8b, transparent 40% 60%, #8b8b8b );
         border-image-slice: 1;
         height: 100%;
         padding: 50px;
