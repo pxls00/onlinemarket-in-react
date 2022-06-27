@@ -1,0 +1,45 @@
+@import "../../themes.scss";
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 278px);
+  justify-content: space-between;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  row-gap: 30px;
+  &__item {
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.3s transform;
+    }
+    &--btn {
+      transition: 0.3s bottom;
+      position: absolute;
+      bottom: -65px;
+      left: 0;
+      right: 0;
+      height: 62px;
+      background: rgba(85, 183, 76, 0.8);
+      border-radius: 13px 13px 0px 0px;
+      text-decoration: none;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &:hover > &--btn {
+        bottom: 0;
+    }
+    &:hover > &--img {
+        transform: scale(1.2, 1.2);
+    }
+  }
+}
