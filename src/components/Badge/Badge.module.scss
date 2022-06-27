@@ -1,0 +1,27 @@
+@import '../../themes.scss';
+.badge {
+    &__wrapper {
+        padding: 20px;
+        background: #f1f1f1;
+        height: 380px;
+    }
+    &__content {
+        border: 2px solid $borderGrey;
+        border-image: linear-gradient(to bottom, $borderGrey, transparent, transparent, $borderGrey);
+        border-image-slice: 1;
+        height: 100%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &--title {
+            font-size: 48px;
+            color: $titleGrey;
+        }
+        &--text {
+                color: #263240;
+                font-size: 22px;
+                max-width: 500px;
+        }
+    }
+}

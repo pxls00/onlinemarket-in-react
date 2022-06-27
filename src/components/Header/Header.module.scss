@@ -24,6 +24,7 @@
 
 .nav {
   margin-top: 50px;
+  margin-bottom: 30px;
   &__list {
     background: linear-gradient(180deg, #55b74c 0%, #4ba043 162.75%);
     border-radius: 7px;
@@ -35,10 +36,25 @@
     &--item {
       list-style: none;
       a {
+        cursor: pointer;
         color: $white;
         text-decoration: none;
         font-size: 18px;
         font-weight: 400;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 100%;
+          display: block;
+          background: $white;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: 0.3s transform;
+        }
+        &:hover::after {
+          content: "";
+          transform: scale(1);
+        }
       }
     }
   }

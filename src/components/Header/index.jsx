@@ -7,6 +7,7 @@ import Container from "../../layout/Container";
 import classes from "./Header.module.scss";
 import logo from "../../images/logo.svg";
 import categories from '../../router/categories'
+import Badge from "../Badge";
 
 const Header = () => {
   return (
@@ -27,12 +28,13 @@ const Header = () => {
       <Container className={classes['nav']}>
         <ul className={classes['nav__list']}>
           {categories.map((category) => (
-            <li className={classes['nav__list--item']}>
+            <li className={classes['nav__list--item']} key={category.text}>
               <a href={category.path}>{category.text}</a>
             </li>
           ))}
         </ul>
       </Container>
+      <Badge />
     </header>
   );
 };
