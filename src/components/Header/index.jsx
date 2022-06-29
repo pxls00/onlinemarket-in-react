@@ -2,18 +2,21 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 import Container from "../../layout/Container";
 import classes from "./Header.module.scss";
 import logo from "../../images/logo.svg";
-import categories from '../../router/categories'
+import categories from "../../router/categories";
 import Badge from "../Badge";
 
 const Header = () => {
   return (
-    <header className={classes['header']}>
+    <header className={classes["header"]}>
       <Container className={classes["header__content"]}>
-        <img src={logo} className={classes["header__logo"]} alt="" />
+        <Link to={"/"} className={classes["header__logo"]}>
+          <img src={logo} alt="" />
+        </Link>
         <span className={classes["header__icon-group"]}>
           <FontAwesomeIcon
             icon={faHeart}
@@ -25,11 +28,11 @@ const Header = () => {
           />
         </span>
       </Container>
-      <Container className={classes['nav']}>
-        <ul className={classes['nav__list']}>
+      <Container className={classes["nav"]}>
+        <ul className={classes["nav__list"]}>
           {categories.map((category) => (
-            <li className={classes['nav__list--item']} key={category.text}>
-              <a href={category.path}>{category.text}</a>
+            <li className={classes["nav__list--item"]} key={category.text}>
+              <Link to={category.path}>{category.text}</Link>
             </li>
           ))}
         </ul>
