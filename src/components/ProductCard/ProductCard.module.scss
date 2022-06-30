@@ -1,0 +1,36 @@
+@import "../../themes.scss";
+
+.card {
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 22px;
+    color: $black;
+    font-weight: 700;
+    margin: 24px 0;
+  }
+  &__price {
+    color: $black;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  &__discount {
+    color: $disPrice;
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: line-through;
+  }
+  &__btn {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    border: none;
+    background: #55b74c;
+    border-radius: 7px;
+  }
+}

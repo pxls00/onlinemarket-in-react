@@ -1,15 +1,15 @@
 import React from 'react'
-import { useParams} from 'react-router-dom'
+// import { useParams} from 'react-router-dom'
 import Header from '../../components/Header'
 import Container from '../../layout/Container'
-
+import ProductCard from '../../components/ProductCard'
+import classes from './Category.module.scss'
 const Category = () => {
-  const params = useParams()
   return (
     <>
       <Header />
-      <Container>
-          
+      <Container className={classes['card-block']}>
+          <ProductCard />
       </Container>
     </>
   )

@@ -9,10 +9,10 @@ const CategoriesBlock = () => {
   return (
     <Container className={classes['categories']}>
         {categories.map(category => (
-            <div className={classes['categories__item']} key={category.text}>
+            <Link to={category.path} className={classes['categories__item']} key={category.text}>
                 <img src={category.image} alt="" className={classes['categories__item--img']}/>
-                <Link to={category.path} className={classes['categories__item--btn']}>{category.text}</Link>
-            </div>
+                <Link  to={category.path} className={classes['categories__item--btn']}>{category.text}</Link>
+            </Link>
         ))}
     </Container>
   )
