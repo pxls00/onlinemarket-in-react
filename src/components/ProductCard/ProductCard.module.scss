@@ -30,11 +30,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     width: 100%;
-    border: none;
-    background: #55b74c;
+    background: white;
+    color: $green;
+    border: 3px solid $green;
     border-radius: 7px;
     font-size: 16px;
+    transition: 0.3s color;
+  }
+  &__btn--selected {
+    background: $green;
+    color: $white;
+    border: 3px solid $green;
+
   }
 }

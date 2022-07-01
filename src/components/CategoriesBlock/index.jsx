@@ -11,7 +11,7 @@ const CategoriesBlock = () => {
         {categories.map(category => (
             <Link to={category.path} className={classes['categories__item']} key={category.text}>
                 <img src={category.image} alt="" className={classes['categories__item--img']}/>
-                <Link  to={category.path} className={classes['categories__item--btn']}>{category.text}</Link>
+                <p className={classes['categories__item--btn']}>{category.text}</p>
             </Link>
         ))}
     </Container>
