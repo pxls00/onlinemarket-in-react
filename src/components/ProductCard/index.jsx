@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './ProductCard.module.scss'
-
+import classNames from 'classnames'
 const ProductCard = () => {
   const api = {
     "id": 0,
@@ -13,13 +13,15 @@ const ProductCard = () => {
     "price": 50,
     "discount": 100
   }
+  const [selected, setSelected] = useState(false)
+  const changeSelection  = () => setSelected(!selected)
   const [ image ] = api.images
   return (
     <div className={classes['card']}>
         <img src={image} alt="" className={classes['card__img']} />
         <h3 className={classes['card__title']}>{api.name}</h3>
         <p className={classes['card__price']}>{api.price} USD<span className={classes['card__discount']}>{api.discount} USD</span></p>
-        <button className={classes['card__btn']}>Add to card</button>
+        <button onClick={changeSelection} className={classNames(classes['card__btn'], selected && classes['card__btn--selected'])}>{selected ? 'Added' : 'Add to card'}</button>
     </div>
   )
 }
