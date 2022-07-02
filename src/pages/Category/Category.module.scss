@@ -2,7 +2,8 @@
     margin-top: 55px;
     margin-bottom: 55px;
     display: grid;
-    grid-template-columns: repeat(3, 278px);
+    grid-template-columns: repeat(4, 278px);
     row-gap: 20px;
     justify-content: space-between;
+    align-items: stretch;
 }
