@@ -19,7 +19,7 @@ const categories = [
     },
     {
         text: 'Fruit Carts',
-        path: 'categories/carts',
+        path: 'categories/fruits',
         image: fruits
     },
     {
