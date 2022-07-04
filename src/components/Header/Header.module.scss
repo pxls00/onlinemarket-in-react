@@ -53,9 +53,11 @@
           transition: 0.3s transform;
         }
         &:hover::after {
-          content: "";
           transform: scale(1);
         }
+      }
+      &-active::after {
+        transform: scale(1) !important;
       }
     }
   }

@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Container from "../../layout/Container";
 import classes from "./Header.module.scss";
@@ -11,6 +11,14 @@ import categories from "../../router/categories";
 import Badge from "../Badge";
 
 const Header = () => {
+  const location = useLocation()
+  function classActive(path) {
+    if(path === location.pathname) {
+      return true
+    }else {
+      return false
+    }
+  }
   return (
     <header className={classes["header"]}>
       <Container className={classes["header__content"]}>
@@ -32,7 +40,7 @@ const Header = () => {
         <ul className={classes["nav__list"]}>
           {categories.map((category) => (
             <li className={classes["nav__list--item"]} key={category.text}>
-              <Link to={category.path}>{category.text}</Link>
+              <Link to={`/${category.path}`} className={classActive(`/${category.path}`) ? classes['nav__list--item-active'] : ''} >{category.text}</Link>
             </li>
           ))}
         </ul>
